@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-shell
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api-shell
+  template:
+    metadata:
+      labels:
+        app: api-shell
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-shell
+spec:
+  selector:
+    app: api-shell
+  ports:
+    - port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-shell
+spec:
+  rules:
+  - host: api.shell-local.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-shell
+            port:
+              number: 80

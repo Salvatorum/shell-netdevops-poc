@@ -1,0 +1,32 @@
+---
+- name: Configuración de Nodo NetDevOps Shell
+  hosts: thinkpad
+  become: yes
+  tasks:
+    - name: Instalar paquetes esenciales de red y docker
+      pacman:
+        name: 
+          - docker
+          - docker-compose
+          - ufw
+          - iproute2
+        state: present
+
+    - name: Asegurar que Docker esté corriendo
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Configurar Firewall para el proyecto
+      ufw:
+        rule: allow
+        from_ip: 192.168.0.23
+        port: '80'
+        proto: tcp
+      notify: Reload UFW
+
+  handlers:
+    - name: Reload UFW
+      ufw:
+        state: enabled
