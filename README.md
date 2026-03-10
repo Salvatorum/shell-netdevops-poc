@@ -11,12 +11,12 @@ Demostrar la integración de redes tradicionales con prácticas modernas de DevO
 - **Redes:** Modelo OSI, Protocolos TCP/IP, DNS Local, ICMP.
 
 ## 🌐 Arquitectura de Red
-- **Segmento LAN:**  {{ network_address }}
-- **Servidor (Arch):** {{ server_ip }} (IP Estática)
-- **Cliente (Windows):** {{ client_ip }}
+- **Segmento LAN:**  {{ 192.168.0.0/24 }}
+- **Servidor (Arch):** {{ 192.168.0.21 }} (IP Estática)
+- **Cliente (Windows):** {{ 192.168.0.23 }}
 - **Resolución DNS:** `api.shell-local.com` apuntando al nodo de Kubernetes.
 
 ## 🚀 Cómo ejecutar este laboratorio
 1. **Provisionamiento:** Ejecutar `ansible-playbook -i ansible/inventory.ini ansible/setup_node.yml`.
 2. **Despliegue K8s:** Ejecutar `kubectl apply -f kubernetes/shell-api.yaml`.
-3. **Monitoreo:** Correr `python monitoring/network_checker.py` para validar la disponibilidad del Ingress.
+3. **Monitoreo:** Correr `python monitoring/monitor_shell.py` para validar la disponibilidad del Ingress.
