@@ -11,9 +11,9 @@ Demostrar la integración de redes tradicionales con prácticas modernas de DevO
 - **Redes:** Modelo OSI, Protocolos TCP/IP, DNS Local, ICMP.
 
 ## 🌐 Arquitectura de Red
-- **Segmento LAN:** 192.168.0.0/24
-- **Servidor (Arch):** 192.168.0.21 (IP Estática)
-- **Cliente (Windows):** 192.168.0.23
+- **Segmento LAN:**  {{ network_address }}
+- **Servidor (Arch):** {{ server_ip }} (IP Estática)
+- **Cliente (Windows):** {{ client_ip }}
 - **Resolución DNS:** `api.shell-local.com` apuntando al nodo de Kubernetes.
 
 ## 🚀 Cómo ejecutar este laboratorio
