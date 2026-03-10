@@ -12,7 +12,7 @@ Demostrar la integración de redes tradicionales con prácticas modernas de DevO
 
 ## 🌐 Arquitectura de Red
 - **Segmento LAN:** 192.168.0.0/24
-- **Servidor (Arch):** 192.168.0.14 (IP Estática)
+- **Servidor (Arch):** 192.168.0.21 (IP Estática)
 - **Cliente (Windows):** 192.168.0.23
 - **Resolución DNS:** `api.shell-local.com` apuntando al nodo de Kubernetes.
 
