@@ -2,7 +2,6 @@ import requests
 import time
 from datetime import datetime
 
-# El dominio que configuramos en el archivo hosts
 URL = "http://api.shell-local.com"
 
 def check_status():
@@ -18,4 +17,4 @@ if __name__ == "__main__":
     print("--- Shell Network Monitoring Tool ---")
     while True:
         check_status()
-        time.sleep(10) # Chequea cada 10 segundos
+        time.sleep(10)
