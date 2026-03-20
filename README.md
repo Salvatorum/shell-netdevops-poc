@@ -1,9 +1,9 @@
 # Shell Infrastructure PoC: NetDevOps Junior Lab
 
-![Arch Linux](https://img.shields.io/badge/OS-Arch_Linux-1793D1?style=flat-square&logo=arch-linux&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Ansible](https://img.shields.io/badge/Automation-Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-![Python](https://img.shields.io/badge/Scripting-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+[![Arch Linux](https://img.shields.io/badge/OS-Arch_Linux-1793D1?style=flat-square&logo=arch-linux&logoColor=white)](https://archlinux.org/)
+[![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Ansible](https://img.shields.io/badge/Automation-Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)](https://www.ansible.com/)
+[![Python](https://img.shields.io/badge/Scripting-Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 
 ## Descripción General
 Este repositorio documenta una Prueba de Concepto (PoC) enfocada en la integración de redes tradicionales con prácticas modernas de DevOps. El proyecto automatiza el despliegue de una API sobre un clúster local de Kubernetes, garantizando la conectividad, el enrutamiento y la seguridad entre nodos híbridos en una red local.
@@ -29,3 +29,6 @@ graph TD
     classDef server fill:#1793d1,stroke:#106a96,stroke-width:2px,color:#fff;
     class Client client;
     class Server server;
+
+
+
